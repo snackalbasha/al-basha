@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الباشا سناك</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--card:#fff;--tx:#2a1a14;--mut:#7a6a60;--ac:#c8102e;--ac2:#f2b705;--bd:#eadfd2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1412;--card:#271d1a;--tx:#f5ece6;--mut:#b5a399;--bd:#3a2c27}}
+:root[data-theme="dark"]{--bg:#1b1412;--card:#271d1a;--tx:#f5ece6;--mut:#b5a399;--bd:#3a2c27}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.7}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:#8a0a1f;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:8px 14px;gap:8px}
+.top b{font-size:1.2rem;font-weight:800}
+.top nav{display:flex;gap:2px;overflow-x:auto}
+.top a{color:#fff;text-decoration:none;padding:5px 10px;border-radius:99px;font-size:.92rem;white-space:nowrap}
+.top a.on{background:var(--ac2);color:#2a1a14;font-weight:700}
+.wrap{max-width:760px;margin:0 auto;padding:14px 14px 40px}
+.hero{height:300px;background-size:cover;background-position:center;position:relative;display:flex;align-items:flex-end}
+.hero div{width:100%;padding:24px 16px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;text-align:center}
+.hero h1{margin:0;font-size:2.2rem;font-weight:800}
+.hero p{margin:2px 0 12px}
+.btn{display:inline-block;background:var(--ac2);color:#2a1a14;font-weight:700;padding:8px 22px;border-radius:99px;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+h2{color:var(--ac);margin:20px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden}
+.card .im{height:120px;background-size:cover;background-position:center}
+.card div.t{padding:8px 12px;font-weight:600}
+.card small{display:block;color:var(--ac);font-weight:800}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:10px}
+.tabs button{flex:1;white-space:nowrap;font:inherit;font-weight:600;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 14px;border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.ban{height:130px;border-radius:14px;background-size:cover;background-position:center;margin-bottom:10px}
+input,textarea{width:100%;font:inherit;padding:10px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx);margin-bottom:10px}
+.item{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:8px 14px;margin-bottom:8px}
+.item .n{flex:1;font-weight:600}.item .p{color:var(--ac);font-weight:800;white-space:nowrap}
+.item button{width:34px;height:34px;border-radius:50%;border:0;background:var(--ac2);color:#2a1a14;font-size:1.3rem;font-weight:800;cursor:pointer}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;margin-bottom:10px}
+.pic{width:100%;height:200px;object-fit:cover;border-radius:14px;margin:8px 0}
+#cart{position:fixed;inset-inline:0;bottom:0;background:var(--card);border-top:2px solid var(--ac);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:none;z-index:8}
+#cart .in{max-width:760px;margin:auto}.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+#list{max-height:20vh;overflow:auto;margin:6px 0;font-size:.92rem}#list div{display:flex;justify-content:space-between}
+#list button,.clr{border:1px solid var(--bd);background:none;color:var(--ac);border-radius:10px;cursor:pointer;font:inherit}
+.th{width:64px;height:64px;border-radius:10px;background-size:cover;background-position:center;flex:none;display:flex;align-items:center;justify-content:center;font-size:1.9rem;background-color:var(--bd)}
+.ig{display:block;color:var(--mut);font-weight:400;font-size:.8rem;line-height:1.4}
+.th,.im,.ban,.hero,img.pic{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+#lbi{max-width:100%;max-height:100%;object-fit:contain}
+#lbx{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));inset-inline-start:12px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:1.6rem;cursor:pointer}
+#wa{position:fixed;inset-inline-end:16px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);z-index:7;transition:bottom .2s}
+#wa svg{width:34px;height:34px}
+.en{display:block;color:var(--ac);font-weight:600;font-size:.8rem;text-align:right;line-height:1.4}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:10px}
+</style>
+</head>
+<body>
+<div class="top"><b>الباشا سناك</b><nav id="nav"></nav></div>
+<div id="app"></div>
+<footer><div style="font-weight:600;color:var(--tx);margin-bottom:4px">🕙 ساعات العمل: يومياً من 10 صباحاً حتى 12 منتصف الليل، ما عدا يوم الأربعاء (مغلق)</div>الأسعار بالليرة اللبنانية وقابلة للتغيير · جميع الحقوق محفوظة</footer>
+<a id="wa" href="https://wa.me/96176164849" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب"><svg viewBox="0 0 32 32" fill="#fff"><path d="M16.003 3C8.83 3 3 8.83 3 16.003c0 2.29.6 4.52 1.74 6.49L3 29l6.67-1.7a12.97 12.97 0 0 0 6.33 1.62C23.17 28.92 29 23.1 29 15.93 29 8.76 23.17 3 16.003 3zm0 23.7a10.7 10.7 0 0 1-5.46-1.5l-.4-.23-3.96 1.01 1.06-3.86-.26-.4a10.67 10.67 0 0 1-1.63-5.7c0-5.9 4.8-10.7 10.7-10.7s10.7 4.8 10.7 10.7-4.8 10.68-10.75 10.68z"/><path d="M22.6 19.4c-.3-.15-1.8-.9-2.1-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.4-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.93-2.25-.25-.58-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.5 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.8-.74 2.05-1.45.25-.7.25-1.3.18-1.45-.08-.13-.28-.2-.58-.35z"/></svg></a>
+<div id="lb"><button id="lbx" aria-label="إغلاق">×</button><img id="lbi" alt=""></div>
+<div id="cart"><div class="in"><div class="row"><b>طلبي</b><button class="clr" id="clr">مسح الكل</button></div><div id="list"></div><div class="row"><span>المجموع</span><b id="tot" style="color:var(--ac)"></b></div><div class="row" style="gap:6px;margin-top:6px"><input id="cn" placeholder="الاسم" style="margin:0;font-size:16px;padding:8px 12px"><input id="ca" placeholder="العنوان" style="margin:0;font-size:16px;padding:8px 12px"></div><a id="wo" class="btn" target="_blank" rel="noopener" href="https://wa.me/96176164849" style="display:block;text-align:center;background:#25D366;color:#fff;margin-top:6px">أرسل الطلب عبر واتساب</a></div></div>
+<script>
+var IMG=["t_m0.jpg","t_m1.jpg","t_m2.jpg","t_m3.jpg"].map(function(b){return "url("+b+")"});
+function im(k){return typeof k==="number"?IMG[k]:P[k]}
+var P={hall:"url(t_hall.jpg)",front:"url(t_front.jpg)",room:"url(t_room.jpg)",room2:"url(t_room2.jpg)",desk:"url(t_desk.jpg)",b1:"url(t_b1.jpg)",b2:"url(t_b2.jpg)",zing:"url(t_zing.jpg)",beef:"url(t_beef.jpg)",chk:"url(t_chk.jpg)",wings:"url(t_wings.jpg)"};
+var INFO={phone:"03 832 197 - 71 51 70 60<br><b>واتساب:</b> <span dir=\"ltr\">+961 76 164 849</span>",addr:"حرار، عكار",hours:"يومياً من 10 صباحاً حتى 12 منتصف الليل، ما عدا يوم الأربعاء (مغلق)",deliv:"لجميع قرى محافظة عكار"};
+var M={"الوجبات":[["همبرغر",900000],["تشيز برغر",1000000],["تشيكن برغر",900000],["تشيكن تشيز",1000000],["شاورما دجاج",900000],["طاووق",900000],["طاووق سبيسيال",1100000],["زينجر",900000],["كريسبي",900000],["فاهيتا",900000],["فيلادلفيا",1000000],["سجق برغر",900000],["سجق تشيز",1000000],["صحن بطاطا",250000],["شاورما لحمة",1250000],["دبوس الباشا",900000],["دبوس الباشا مع جبن",900000],["فروج بروستد",1500000]],
+"السندويش":[["همبرغر",450000],["تشيز برغر",500000],["تشيكن برغر",450000],["تشيكن تشيز",500000],["شاورما دجاج",500000],["شاورما لحمة",750000],["شاورما صاروخ",700000],["طاووق",500000],["طاووق سبيسيال",750000],["زينجر",500000],["كريسبي",500000],["فاهيتا",500000],["فيلادلفيا",500000],["سجق برغر",450000],["سجق تشيز",500000],["بطاطا",200000]],
+"المشروبات":[["كينزا",60000],["عيران",80000],["مياه معدنية",30000],["مشروبات غازية",100000],["مشروبات غازية لتر وربع",150000]]};
+var BAN={"الوجبات":3,"السندويش":0,"المشروبات":2};
+var PAGES=[["home","الرئيسية"],["menu","القائمة"],["about","من نحن"],["contact","اتصل بنا"]];
+var cur="الوجبات",cart={},app=document.getElementById("app");
+var fmt=function(n){return n.toLocaleString("ar-EG")+" ل.ل"};
+function go(p){location.hash=p}
+function route(){
+ var p=(location.hash||"#home").slice(1);if(!/^(home|menu|about|contact)$/.test(p))p="home";
+ document.getElementById("nav").innerHTML=PAGES.map(function(x){return '<a href="#'+x[0]+'" class="'+(x[0]===p?"on":"")+'">'+x[1]+'</a>'}).join("");
+ window.scrollTo(0,0);({home:home,menu:menu,about:about,contact:contact})[p]();
+}
+function home(){
+ var pop=[["شاورما لحمة","beef","سندويش 750000"],["شاورما دجاج","chk","سندويش 500000"],["زينجر","zing","سندويش 500000"],["همبرغر",3,"سندويش 450000"]];
+ app.innerHTML='<div class="hero" style="background-image:'+P.hall+'"><div><h1>الباشا سناك</h1><p>شاورما، برغر، وجبات سريعة بطعم لا يُنسى</p><a class="btn" href="#menu">شاهد القائمة</a></div></div><div class="wrap"><div class="box" style="margin-top:6px;text-align:center"><b style="color:var(--ac)">🛵 خدمة التوصيل</b><br>نوصّل لجميع قرى محافظة عكار<br><small style="color:var(--mut)">يومياً من 10 صباحاً حتى 12 منتصف الليل، ما عدا يوم الأربعاء (مغلق)</small></div><h2>الأكثر طلباً</h2><div class="grid">'+
+ pop.map(function(x){return '<div class="card"><div class="im" style="background-image:'+im(x[1])+'"></div><div class="t">'+x[0]+'<small>'+x[2].replace(/\d+/,function(n){return fmt(+n)})+'</small></div></div>'}).join("")+
+ '</div><h2>سندويش كيك للمناسبات</h2><div class="grid"><div class="card"><div class="im" style="height:150px;background-image:'+P.b1+'"></div></div><div class="card"><div class="im" style="height:150px;background-image:'+P.b2+'"></div></div></div><div class="box" style="margin-top:10px">نجهّز لك سندويش كيك لأعياد الميلاد والمناسبات. اتصل بنا للطلب.</div><div class="box" style="margin-top:14px"><b>لماذا الباشا؟</b><br>مكونات طازجة، تحضير سريع، وأسعار مناسبة للجميع.</div></div>';
+}
+var EN={"همبرغر":"Hamburger","تشيز برغر":"Cheeseburger","تشيكن برغر":"Chicken Burger","تشيكن تشيز":"Chicken Cheese","شاورما دجاج":"Chicken Shawarma","شاورما لحمة":"Beef Shawarma","شاورما صاروخ":"Rocket Shawarma","طاووق":"Taouk","طاووق سبيسيال":"Special Taouk","زينجر":"Zinger","كريسبي":"Crispy","فاهيتا":"Fajita","فيلادلفيا":"Philadelphia","سجق برغر":"Sausage Burger","سجق تشيز":"Sausage Cheese","صحن بطاطا":"Fries Plate","بطاطا":"Fries","دبوس الباشا":"Dabbous Al Basha","دبوس الباشا مع جبن":"Dabbous Al Basha with Cheese","فروج بروستد":"Broasted Chicken","كينزا":"Kinza","عيران":"Ayran","مياه معدنية":"Mineral Water","مشروبات غازية":"Soft Drinks","مشروبات غازية لتر وربع":"Soft Drinks 1.25 L"};
+var ING={"همبرغر":"لحم بقري، خس، بندورة، مخلل، صوص","تشيز برغر":"لحم بقري، جبنة شيدر، خس، بندورة، صوص","تشيكن برغر":"صدر دجاج مقرمش، خس، بندورة، مايونيز","تشيكن تشيز":"دجاج مقرمش، جبنة، خس، صوص","شاورما دجاج":"دجاج متبّل، ثوم، مخلل، بطاطا","شاورما لحمة":"لحم متبّل، طحينة، بندورة، بصل، مخلل","شاورما صاروخ":"شاورما، بطاطا، ثوم، مخلل في خبز رقيق","طاووق":"دجاج مشوي متبّل، ثوم، مخلل، بطاطا","طاووق سبيسيال":"طاووق، جبنة، بطاطا، ثوم، إضافات خاصة","زينجر":"دجاج مقرمش حار، خس، مايونيز","كريسبي":"دجاج كريسبي، خس، صوص","فاهيتا":"دجاج، فليفلة، بصل، جبنة، صوص","فيلادلفيا":"شرائح لحم، جبنة فيلادلفيا، فطر، فليفلة","سجق برغر":"سجق، خس، بندورة، مخلل، صوص","سجق تشيز":"سجق، جبنة، خس، صوص","صحن بطاطا":"بطاطا مقلية مع كاتشب وثوم","بطاطا":"بطاطا مقلية مع كاتشب وثوم","دبوس الباشا":"وصفة الباشا الخاصة","دبوس الباشا مع جبن":"وصفة الباشا الخاصة مع الجبنة","فروج بروستد":"دجاج بروستد، بطاطا، ثوم، مخلل، خبز","كينزا":"مشروب غازي","عيران":"لبن رائب بارد","مياه معدنية":"مياه معدنية","مشروبات غازية":"مشروب غازي","مشروبات غازية لتر وربع":"مشروب غازي، عبوة لتر وربع"};
+function th(n,c){
+ var m=[[/بطاطا/,"🍟"],[/كينزا|غازية/,"🥤"],[/عيران/,"🥛"],[/مياه/,"💧"],[/بروستد/,"wings"],[/زينجر|كريسبي|تشيكن/,"zing"],[/لحمة|صاروخ|فيلادلفيا/,"beef"],[/دجاج/,"chk"],[/فاهيتا|طاووق/,1],[/./,3]];
+ for(var i=0;i<m.length;i++)if(m[i][0].test(n)){var v=m[i][1];return(typeof v==="number"||P[v])?'<div class="th" style="background-image:'+im(v)+'"></div>':'<div class="th">'+v+'</div>'}
+}
+function menu(){
+ app.innerHTML='<div class="wrap"><div class="tabs" id="tb"></div><div class="ban" id="bn"></div><input id="q" placeholder="ابحث في القائمة..."><div id="items"></div></div>';
+ var tb=document.getElementById("tb"),q=document.getElementById("q");
+ Object.keys(M).forEach(function(k){var b=document.createElement("button");b.textContent=k;b.onclick=function(){cur=k;q.value="";draw()};tb.appendChild(b)});
+ function draw(){
+  Array.prototype.forEach.call(tb.children,function(b){b.className=b.textContent===cur?"on":""});
+  document.getElementById("bn").style.backgroundImage=IMG[BAN[cur]];
+  var s=q.value.trim(),l=[],box=document.getElementById("items");
+  if(s)Object.keys(M).forEach(function(k){M[k].forEach(function(i){if(i[0].indexOf(s)>-1||(EN[i[0]]||"").toLowerCase().indexOf(s.toLowerCase())>-1)l.push([k,i])})});else M[cur].forEach(function(i){l.push([cur,i])});
+  box.innerHTML=l.length?"":'<div class="box">لا توجد نتائج</div>';
+  l.forEach(function(e){var id=e[0]+"|"+e[1][0],d=document.createElement("div");d.className="item";
+   d.innerHTML=th(e[1][0],e[0])+'<span class="n">'+e[1][0]+(s?' <small>('+e[0]+')</small>':'')+(EN[e[1][0]]?'<small class="en" dir="ltr">'+EN[e[1][0]]+'</small>':'')+(ING[e[1][0]]?'<small class="ig">'+ING[e[1][0]]+'</small>':'')+'</span><span class="p">'+fmt(e[1][1])+'</span>';
+   var b=document.createElement("button");b.textContent="+";b.setAttribute("aria-label","أضف");
+   b.onclick=function(){cart[id]=cart[id]||{n:e[1][0]+" ("+e[0]+")",p:e[1][1],c:0};cart[id].c++;drawCart()};d.appendChild(b);box.appendChild(d)});
+ }
+ q.oninput=draw;draw();
+}
+function about(){
+ app.innerHTML='<div class="wrap"><h2>من نحن</h2><img class="pic" alt="" src="'+IMG[3].slice(4,-1)+'"><div class="box">الباشا سناك مطعم للوجبات السريعة، نقدّم الشاورما والبرغر والطاووق والزينجر والفاهيتا وغيرها، بوصفات مميزة ومكونات طازجة.</div><div class="box"><b>قيمنا</b><br>• الجودة في كل وجبة<br>• السرعة في التحضير<br>• أسعار عادلة<br>• خدمة بابتسامة</div><h2>جولة في المحل</h2><div class="grid">'+["front","room","room2","desk"].map(function(k){return '<div class="card"><div class="im" style="height:150px;background-image:'+P[k]+'"></div></div>'}).join("")+'</div><p><a class="btn" href="#menu">تصفّح القائمة</a></p></div>';
+}
+var MQ="سناك الباشا تشيكن حرار عكار";
+function mapBox(){var q=encodeURIComponent(MQ),ext=/claude/.test(location.hostname);
+ return '<h2>موقعنا على الخريطة</h2><div class="card">'+(ext?'<div style="height:110px;display:flex;align-items:center;justify-content:center;font-size:2.6rem">📍</div>':'<iframe title="الخريطة" src="https://maps.google.com/maps?q='+q+'&hl=ar&z=16&output=embed" style="width:100%;height:280px;border:0;display:block" loading="lazy" allowfullscreen></iframe>')+'</div><p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+q+'">افتح في خرائط غوغل</a></p>';}
+function contact(){
+ app.innerHTML='<div class="wrap"><h2>اتصل بنا</h2><div class="box"><b>الهاتف:</b> '+INFO.phone+'<br><b>العنوان:</b> '+INFO.addr+'<br><b>ساعات العمل:</b> '+INFO.hours+'<br><b>التوصيل:</b> '+INFO.deliv+'</div>'+mapBox()+'<div class="card"><div class="im" style="height:200px;background-image:'+P.front+'"></div></div><h2>أرسل لنا رسالة</h2><input id="nm" placeholder="الاسم"><textarea id="ms" rows="4" placeholder="رسالتك"></textarea><button class="btn" id="sd">إرسال</button><div id="ok" class="box" style="display:none;margin-top:10px">شكراً لك! سنتواصل معك قريباً.</div></div>';
+ document.getElementById("sd").onclick=function(){if(document.getElementById("ms").value.trim())document.getElementById("ok").style.display="block"};
+}
+function drawCart(){
+ var ids=Object.keys(cart),t=0,l=document.getElementById("list");l.innerHTML="";
+ ids.forEach(function(id){var c=cart[id];t+=c.p*c.c;var r=document.createElement("div");r.innerHTML="<span>"+c.c+" × "+c.n+"</span>";
+  var x=document.createElement("button");x.textContent="−";x.onclick=function(){c.c--;if(c.c<1)delete cart[id];drawCart()};r.appendChild(x);l.appendChild(r)});
+ document.getElementById("cart").style.display=ids.length?"block":"none";document.getElementById("tot").textContent=fmt(t);var c=document.getElementById("cart");document.getElementById("wa").style.bottom=(ids.length?c.offsetHeight+14:18)+"px";
+ var u="https://wa.me/96176164849";
+ if(ids.length){var msg="مرحباً الباشا سناك، بدي أطلب:\n"+ids.map(function(id){var k=cart[id];return "• "+k.c+" × "+k.n+" = "+fmt(k.p*k.c)}).join("\n")+"\nالمجموع: "+fmt(t)+(document.getElementById("cn").value.trim()?"\nالاسم: "+document.getElementById("cn").value.trim():"")+(document.getElementById("ca").value.trim()?"\nالعنوان: "+document.getElementById("ca").value.trim():"")+"\nشكراً!";u+="?text="+encodeURIComponent(msg)}
+ document.getElementById("wa").href=u;document.getElementById("wo").href=u;
+}
+["cn","ca"].forEach(function(i){document.getElementById(i).oninput=drawCart});
+document.getElementById("clr").onclick=function(){cart={};drawCart()};
+function fullOf(s){var m=/t_([A-Za-z0-9]+)\.jpg/.exec(s);if(!m)return null;var k=m[1];if(k==="room2")k="hall";return ""+k+".jpg"}
+var lb=document.getElementById("lb"),lbi=document.getElementById("lbi");
+function closeLb(){lb.style.display="none";lbi.src="";document.body.style.overflow=""}
+lb.onclick=closeLb;
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb()});
+document.addEventListener("click",function(e){
+ if(e.target.closest("a,button,input,textarea,#lb"))return;
+ var el=e.target.closest(".th,.im,.ban,.hero,img.pic");if(!el)return;
+ var s=el.tagName==="IMG"?el.getAttribute("src"):getComputedStyle(el).backgroundImage.replace(/^url\(["']?/,"").replace(/["']?\)$/,"");
+ var f=fullOf(s);if(!f)return;
+ lbi.src=f;lb.style.display="flex";document.body.style.overflow="hidden";
+});
+window.onhashchange=route;route();
+</script>
+</body>
+</html>
